@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">YURXZ Rejoin</string>
+    <string name="channel_name">Rejoin Service</string>
+    <string name="channel_desc">Menjalankan rejoin otomatis di background</string>
+</resources>

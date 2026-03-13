@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.YurxzRejoin" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/accent</item>
+        <item name="colorPrimaryVariant">@color/accent2</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/text</item>
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:statusBarColor">@color/surface</item>
+        <item name="android:navigationBarColor">@color/surface</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="materialCardViewStyle">@style/CardStyle</item>
+    </style>
+
+    <style name="CardStyle" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/card</item>
+        <item name="cardCornerRadius">14dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeColor">@color/border</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <style name="BtnPrimary" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/accent</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="BtnDanger" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/red</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">12dp</item>
+    </style>
+
+    <style name="BtnOutline" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/border</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="cornerRadius">10dp</item>
+    </style>
+</resources>

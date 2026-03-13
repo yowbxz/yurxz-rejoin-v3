@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#08080F</color>
+    <color name="surface">#0F0F1A</color>
+    <color name="card">#141422</color>
+    <color name="border">#1E1E35</color>
+    <color name="accent">#7C3AED</color>
+    <color name="accent2">#A855F7</color>
+    <color name="green">#22C55E</color>
+    <color name="red">#EF4444</color>
+    <color name="yellow">#EAB308</color>
+    <color name="text">#E8E6FF</color>
+    <color name="sub">#6B6888</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+</resources>
