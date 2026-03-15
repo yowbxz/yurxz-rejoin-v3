@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">YURXZ Rejoin</string>
     <string name="channel_name">Rejoin Service</string>
-    <string name="channel_desc">Menjalankan rejoin otomatis di background</string>
+    <string name="channel_desc">Memantau instance Roblox aktif</string>
+    <string name="accessibility_desc">Digunakan untuk mendeteksi aplikasi Roblox yang sedang berjalan di foreground secara otomatis.</string>
 </resources>

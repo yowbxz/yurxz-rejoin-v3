@@ -7,11 +7,14 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"
         tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
         tools:ignore="QueryAllPackagesPermission" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE"
+        tools:ignore="ProtectedPermissions" />
 
     <application
         android:allowBackup="true"
@@ -33,12 +36,31 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".SettingsActivity" android:exported="false" />
+
         <service
             android:name=".RejoinService"
             android:enabled="true"
             android:exported="false"
             android:foregroundServiceType="dataSync" />
 
-            <activity android:name=".SettingsActivity" android:exported="false" />
+        <service
+            android:name=".FloatingWidgetService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name=".RejoinAccessibilityService"
+            android:exported="true"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+            android:label="YURXZ Rejoin">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config" />
+        </service>
+
     </application>
 </manifest>

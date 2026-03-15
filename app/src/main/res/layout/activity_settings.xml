@@ -15,174 +15,184 @@
         android:paddingTop="16dp">
 
         <!-- HEADER -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
             android:layout_marginBottom="16dp">
-
-            <ImageButton
-                android:id="@+id/btnBack"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:src="@drawable/ic_back"
-                android:background="@drawable/bg_chip"
-                android:tint="@color/text"
-                android:contentDescription="Back"
-                android:layout_marginEnd="12dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pengaturan"
-                android:textColor="@color/text"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+            <ImageButton android:id="@+id/btnBack" android:layout_width="36dp"
+                android:layout_height="36dp" android:src="@drawable/ic_back"
+                android:background="@drawable/bg_chip" android:tint="@color/text"
+                android:contentDescription="Back" android:layout_marginEnd="12dp" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Pengaturan" android:textColor="@color/text"
+                android:textSize="18sp" android:textStyle="bold" />
         </LinearLayout>
 
         <!-- WEBHOOK CARD -->
         <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:cardBackgroundColor="@color/card"
-            app:cardCornerRadius="14dp"
-            app:strokeColor="@color/border"
-            app:strokeWidth="1dp"
-            app:cardElevation="0dp">
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp" app:cardBackgroundColor="@color/card"
+            app:cardCornerRadius="14dp" app:strokeColor="@color/border"
+            app:strokeWidth="1dp" app:cardElevation="0dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="14dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="14dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="💬 DISCORD WEBHOOK"
-                    android:textColor="@color/sub"
-                    android:textSize="10sp"
-                    android:textStyle="bold"
-                    android:letterSpacing="0.15"
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="💬 DISCORD WEBHOOK" android:textColor="@color/sub"
+                    android:textSize="10sp" android:textStyle="bold" android:letterSpacing="0.15"
                     android:layout_marginBottom="12dp" />
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Webhook URL"
-                    android:layout_marginBottom="12dp"
-                    app:boxBackgroundColor="@color/surface"
-                    app:boxStrokeColor="@color/border"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="Webhook URL" android:layout_marginBottom="10dp"
+                    app:boxBackgroundColor="@color/surface" app:boxStrokeColor="@color/border"
                     app:hintTextColor="@color/sub"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etWebhook"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textUri"
-                        android:textColor="@color/text"
-                        android:hint="https://discord.com/api/webhooks/..." />
+                        android:id="@+id/etWebhook" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:inputType="textUri"
+                        android:textColor="@color/text" android:hint="https://discord.com/api/webhooks/..." />
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Check Interval (detik)"
-                    app:boxBackgroundColor="@color/surface"
-                    app:boxStrokeColor="@color/border"
-                    app:hintTextColor="@color/sub"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etInterval"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="number"
-                        android:textColor="@color/text"
-                        android:text="30" />
-                </com.google.android.material.textfield.TextInputLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:hint="Check Interval (detik)"
+                        android:layout_marginEnd="6dp"
+                        app:boxBackgroundColor="@color/surface" app:boxStrokeColor="@color/border"
+                        app:hintTextColor="@color/sub"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etInterval" android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:inputType="number"
+                            android:textColor="@color/text" android:text="30" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:hint="SS Interval (detik)"
+                        app:boxBackgroundColor="@color/surface" app:boxStrokeColor="@color/border"
+                        app:hintTextColor="@color/sub"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etSsInterval" android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:inputType="number"
+                            android:textColor="@color/text" android:text="60" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- FEATURES CARD -->
+        <!-- RESOLUSI CARD -->
         <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:cardBackgroundColor="@color/card"
-            app:cardCornerRadius="14dp"
-            app:strokeColor="@color/border"
-            app:strokeWidth="1dp"
-            app:cardElevation="0dp">
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp" app:cardBackgroundColor="@color/card"
+            app:cardCornerRadius="14dp" app:strokeColor="@color/border"
+            app:strokeWidth="1dp" app:cardElevation="0dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="14dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="14dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="📱 RESOLUSI CUSTOM" android:textColor="@color/sub"
+                    android:textSize="10sp" android:textStyle="bold" android:letterSpacing="0.15"
+                    android:layout_marginBottom="12dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="⚙️ FITUR"
-                    android:textColor="@color/sub"
-                    android:textSize="10sp"
-                    android:textStyle="bold"
-                    android:letterSpacing="0.15"
-                    android:layout_marginBottom="4dp" />
-
-                <!-- Auto Mute -->
                 <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                    android:orientation="horizontal" android:gravity="center_vertical"
-                    android:paddingVertical="12dp"
-                    android:background="@drawable/divider_bottom">
-                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
-                        android:layout_weight="1" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="🔇 Auto Mute" android:textColor="@color/text" android:textSize="14sp" />
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Matikan audio Roblox otomatis" android:textColor="@color/sub" android:textSize="11sp" />
-                    </LinearLayout>
-                    <com.google.android.material.switchmaterial.SwitchMaterial
-                        android:id="@+id/switchMute"
-                        android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:checked="true" />
+                    android:orientation="horizontal" android:layout_marginBottom="10dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:hint="Width" android:layout_marginEnd="6dp"
+                        app:boxBackgroundColor="@color/surface" app:boxStrokeColor="@color/border"
+                        app:hintTextColor="@color/sub"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etResWidth" android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:inputType="number"
+                            android:textColor="@color/text" android:text="540" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:hint="Height" android:layout_marginEnd="6dp"
+                        app:boxBackgroundColor="@color/surface" app:boxStrokeColor="@color/border"
+                        app:hintTextColor="@color/sub"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etResHeight" android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:inputType="number"
+                            android:textColor="@color/text" android:text="960" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:hint="Density"
+                        app:boxBackgroundColor="@color/surface" app:boxStrokeColor="@color/border"
+                        app:hintTextColor="@color/sub"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etResDensity" android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:inputType="number"
+                            android:textColor="@color/text" android:text="120" />
+                    </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
+
+                <!-- Tombol Reset Resolusi -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnResetRes"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:text="🔄  Reset Resolusi ke Default HP"
+                    android:textSize="13sp"
+                    style="@style/BtnOutline" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- FITUR CARD -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp" app:cardBackgroundColor="@color/card"
+            app:cardCornerRadius="14dp" app:strokeColor="@color/border"
+            app:strokeWidth="1dp" app:cardElevation="0dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="14dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="⚙️ FITUR" android:textColor="@color/sub"
+                    android:textSize="10sp" android:textStyle="bold" android:letterSpacing="0.15"
+                    android:layout_marginBottom="4dp" />
 
                 <!-- Auto Low Res -->
                 <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
                     android:orientation="horizontal" android:gravity="center_vertical"
-                    android:paddingVertical="12dp"
-                    android:background="@drawable/divider_bottom">
+                    android:paddingVertical="12dp" android:background="@drawable/divider_bottom">
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
                         android:layout_weight="1" android:orientation="vertical">
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                             android:text="📱 Auto Low Resolusi" android:textColor="@color/text" android:textSize="14sp" />
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Turun ke 540×960 density 120" android:textColor="@color/sub" android:textSize="11sp" />
+                            android:text="Terapkan resolusi custom saat rejoin" android:textColor="@color/sub" android:textSize="11sp" />
                     </LinearLayout>
                     <com.google.android.material.switchmaterial.SwitchMaterial
-                        android:id="@+id/switchLowRes"
-                        android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:checked="true" />
+                        android:id="@+id/switchLowRes" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:checked="false" />
                 </LinearLayout>
 
                 <!-- Auto Screenshot -->
                 <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
                     android:orientation="horizontal" android:gravity="center_vertical"
-                    android:paddingVertical="12dp"
-                    android:background="@drawable/divider_bottom">
+                    android:paddingVertical="12dp" android:background="@drawable/divider_bottom">
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
                         android:layout_weight="1" android:orientation="vertical">
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                             android:text="📸 Auto Screenshot" android:textColor="@color/text" android:textSize="14sp" />
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Kirim screenshot ke Discord tiap rejoin" android:textColor="@color/sub" android:textSize="11sp" />
+                            android:text="Kirim status ke Discord tiap ssInterval" android:textColor="@color/sub" android:textSize="11sp" />
                     </LinearLayout>
                     <com.google.android.material.switchmaterial.SwitchMaterial
-                        android:id="@+id/switchScreenshot"
-                        android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        android:id="@+id/switchScreenshot" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
                 </LinearLayout>
 
                 <!-- Floating Window -->
@@ -197,13 +207,13 @@
                             android:text="Roblox jalan di popup kecil" android:textColor="@color/sub" android:textSize="11sp" />
                     </LinearLayout>
                     <com.google.android.material.switchmaterial.SwitchMaterial
-                        android:id="@+id/switchFloat"
-                        android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        android:id="@+id/switchFloat" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
                 </LinearLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- SAVE BUTTON -->
+        <!-- SAVE -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSaveSettings"
             android:layout_width="match_parent"
